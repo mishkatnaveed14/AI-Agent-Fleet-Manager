@@ -1,3 +1,4 @@
+  // dashboard functionality
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('sidebarOverlay');
  
