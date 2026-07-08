@@ -13,6 +13,9 @@ class DeveloperAgent extends Agentnew {
 }
 // fleet manager
 class FleetManager {
+    constructor() {
+        this.list = [];
+    }
 }
 export {};
 //# sourceMappingURL=index.js.map
