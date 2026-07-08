@@ -7,6 +7,10 @@ class Agentnew {
     }
 }
 class DeveloperAgent extends Agentnew {
+    constructor(id, name, status) {
+        let specialization = "";
+        super(id, name, status);
+    }
 }
 export {};
 //# sourceMappingURL=index.js.map
