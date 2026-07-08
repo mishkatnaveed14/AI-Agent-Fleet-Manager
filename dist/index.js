@@ -16,6 +16,9 @@ class FleetManager {
     constructor() {
         this.agents = [];
     }
+    addAgent(acceptagent) {
+        this.agents.push(acceptagent);
+    }
 }
 export {};
 //# sourceMappingURL=index.js.map

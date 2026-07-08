@@ -14,18 +14,19 @@ class Agentnew {
   }
 }
 class DeveloperAgent extends Agentnew {
-
   constructor(
     id: string,
     name: string,
     status: "Active" | "Idle" | "Queued" | "Failed" | "Offline",
   ) {
-   
     super(id, name, status);
   }
-//    let specialization: string = ""; 
+  //    let specialization: string = "";
 }
 // fleet manager
-class FleetManager{
-    private agents : AgentNew[] = []
+class FleetManager {
+  private agents: Agent[] = [];
+  public addAgent(acceptagent: Agent): void {
+    this.agents.push(acceptagent);
+  }
 }
