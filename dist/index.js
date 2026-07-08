@@ -11,6 +11,8 @@ class DeveloperAgent extends Agentnew {
         super(id, name, status);
     }
 }
-export {};
 // fleet manager
+class FleetManager {
+}
+export {};
 //# sourceMappingURL=index.js.map
