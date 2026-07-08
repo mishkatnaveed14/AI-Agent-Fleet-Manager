@@ -14,12 +14,15 @@ class Agentnew {
   }
 }
 class DeveloperAgent extends Agentnew {
+
   constructor(
     id: string,
     name: string,
     status: "Active" | "Idle" | "Queued" | "Failed" | "Offline",
   ) {
-    let specialization: string = "";
+   
     super(id, name, status);
   }
+//    let specialization: string = ""; 
 }
+// fleet manager
