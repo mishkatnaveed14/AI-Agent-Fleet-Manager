@@ -6,5 +6,7 @@ class Agentnew {
         this.status = status;
     }
 }
+class DeveloperAgent extends Agentnew {
+}
 export {};
 //# sourceMappingURL=index.js.map
