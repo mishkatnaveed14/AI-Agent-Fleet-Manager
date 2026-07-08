@@ -27,5 +27,5 @@ class DeveloperAgent extends Agentnew {
 }
 // fleet manager
 class FleetManager{
-    private list : string[] = []
+    private agents : AgentNew[] = []
 }
