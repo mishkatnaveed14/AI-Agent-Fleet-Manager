@@ -35,19 +35,23 @@ class FleetManager {
   // assign task
   public assignTask(agentId: string, task: string): void {
     let foundagent = this.agents.find((a) => a.getid() === agentId);
-    if(foundagent !== undefined) {
+    if (foundagent !== undefined) {
       foundagent.status = "Active";
       console.log(`Task '${task}' assigned. Agent status is now Active.`);
-    }else {
+    } else {
       console.error(`Agent with ID '${agentId}' not found.`);
     }
   }
-} 
- const fleetManager = new FleetManager();
+}
+const fleetManager = new FleetManager();
 const deploybtn = document.getElementById("deploybtn") as HTMLButtonElement;
 deploybtn.addEventListener("click", () => {
-const uniqueId = `agent-${Date.now().toString()}`;
-const newAgent = new DeveloperAgent(uniqueId, "New Agent", "Idle");
-fleetManager.addAgent(newAgent);
-
+  const nameInput = document.getElementById("agentName") as HTMLInputElement;
+  const taskInput = document.getElementById("agentTask") as HTMLInputElement;
+  const uniqueId = `agent-${Date.now().toString()}`;
+  const newAgent = new DeveloperAgent(uniqueId, nameInput.value.trim(), "Idle");
+  fleetManager.addAgent(newAgent);
+  fleetManager.assignTask(uniqueId, taskInput.value.trim());
+  nameInput.value = "";
+  taskInput.value = "";
 });
