@@ -26,7 +26,7 @@ class DeveloperAgent extends Agentnew {
 // fleet manager
 class FleetManager {
   private agents: Agentnew[] = [];
-  public addAgent(acceptagent: Agent): void {
+  public addAgent(acceptagent: Agentnew): void {
     this.agents.push(acceptagent);
   }
 }
