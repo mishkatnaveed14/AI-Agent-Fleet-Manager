@@ -10,7 +10,6 @@
   }
  
   function closeSidebar(){
-    // only actually hide the drawer below the lg breakpoint
     if (window.innerWidth < 1024) {
       sidebar.classList.add('-translate-x-full');
       sidebar.classList.remove('translate-x-0');
@@ -19,7 +18,6 @@
     document.body.style.overflow = '';
   }
  
-  // Keep drawer state correct when resizing across the breakpoint
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 1024) {
       sidebar.classList.remove('-translate-x-full');
@@ -30,7 +28,6 @@
     }
   });
  
-  // Close on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeSidebar();
   });
