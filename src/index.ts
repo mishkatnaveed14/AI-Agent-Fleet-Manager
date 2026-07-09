@@ -44,14 +44,32 @@ class FleetManager {
   }
 }
 const fleetManager = new FleetManager();
+// add event listener to the deploy button
 const deploybtn = document.getElementById("deploybtn") as HTMLButtonElement;
+const agentModal = document.getElementById("agentModal") as HTMLDivElement;
+const closeModalBtn = document.getElementById("closeModalBtn") as HTMLButtonElement;
+const cancelBtn = document.getElementById("cancelBtn") as HTMLButtonElement;
+const agentForm = document.getElementById("agentForm") as HTMLFormElement;
+
 deploybtn.addEventListener("click", () => {
-  const nameInput = document.getElementById("agentName") as HTMLInputElement;
+    agentModal.classList.remove("hidden");
+
+  // nameInput.value = "";
+  // taskInput.value = "";
+});
+const hideModal = () => agentModal.classList.add("hidden");
+closeModalBtn.addEventListener("click", hideModal);
+cancelBtn.addEventListener("click", hideModal);
+agentForm.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+   const nameInput = document.getElementById("agentName") as HTMLInputElement;
   const taskInput = document.getElementById("agentTask") as HTMLInputElement;
   const uniqueId = `agent-${Date.now().toString()}`;
   const newAgent = new DeveloperAgent(uniqueId, nameInput.value.trim(), "Idle");
   fleetManager.addAgent(newAgent);
   fleetManager.assignTask(uniqueId, taskInput.value.trim());
+  agentForm.reset();
+  hideModal();
   nameInput.value = "";
   taskInput.value = "";
 });
