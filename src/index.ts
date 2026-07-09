@@ -33,12 +33,13 @@ class FleetManager {
     this.agents.push(acceptagent);
   }
   // assign task
-  public assignTask(agentId: string, task: string): "Active" | "Idle" | "Queued" | "Failed" | "Offline" | undefined {
+  public assignTask(agentId: string, task: string): void {
     let foundagent = this.agents.find((a) => a.getid() === agentId);
     if(foundagent !== undefined) {
-      return foundagent.status = "Active";
+      foundagent.status = "Active";
+      console.log(`Task '${task}' assigned. Agent status is now Active.`);
     }else {
-      return undefined;
+      console.error(`Agent with ID '${agentId}' not found.`);
     }
   }
 }
