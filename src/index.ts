@@ -34,6 +34,6 @@ class FleetManager {
   }
   // assign task
   public assignTask(agentId: string, task: string): void {
-    let foundagent = this.agents.find((a) => a.id === agentId);
+    let foundagent = this.agents.find((a) => a.getid() === agentId);
   }
 }
