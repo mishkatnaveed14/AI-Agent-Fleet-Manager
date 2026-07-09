@@ -24,7 +24,7 @@ class DeveloperAgent extends Agentnew {
   ) {
     super(id, name, status);
   }
-  //    let specialization: string = "";
+
 }
 // fleet manager
 class FleetManager {
