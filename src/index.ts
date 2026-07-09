@@ -43,3 +43,10 @@ class FleetManager {
     }
   }
 }
+const deploybtn = document.getElementById("deploybtn") as HTMLButtonElement;
+deploybtn.addEventListener("click", () => {
+  const fleetManager = new FleetManager();
+  const newAgent = new DeveloperAgent("1", "Agent Smith", "Idle");
+  fleetManager.addAgent(newAgent);
+  fleetManager.assignTask("1", "Process Data");
+});
