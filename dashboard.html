@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Agent Fleet Manager</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./responsive.css">
 </head>
@@ -166,7 +167,7 @@
             </div>
             <span class="text-[10px] font-mono text-neon-green">+8.2%</span>
           </div>
-          <p class="text-2xl font-bold text-white font-mono">42</p>
+          <p class="text-2xl font-bold text-white font-mono" id="activeAgentsCount">42</p>
           <p class="text-xs text-slate-500 mt-0.5">Active Agents</p>
         </div>
 
@@ -182,7 +183,7 @@
             </div>
             <span class="text-[10px] font-mono text-neon-green">+3.1%</span>
           </div>
-          <p class="text-2xl font-bold text-white font-mono">15</p>
+          <p class="text-2xl font-bold text-white font-mono" id="activeAgentsCount" >15</p>
           <p class="text-xs text-slate-500 mt-0.5">Running Tasks</p>
         </div>
 
@@ -197,7 +198,7 @@
             </div>
             <span class="text-[10px] font-mono text-rose-400">−1.4%</span>
           </div>
-          <p class="text-2xl font-bold text-white font-mono">07</p>
+          <p class="text-2xl font-bold text-white font-mono" id="activeAgentsCount">07</p>
           <p class="text-xs text-slate-500 mt-0.5">Flagged Alerts</p>
         </div>
 
@@ -212,7 +213,7 @@
             </div>
             <span class="text-[10px] font-mono text-neon-green">+12</span>
           </div>
-          <p class="text-2xl font-bold text-white font-mono">89</p>
+          <p class="text-2xl font-bold text-white font-mono" id="activeAgentsCount">89</p>
           <p class="text-xs text-slate-500 mt-0.5">Agent Messages</p>
         </div>
       </div>
@@ -258,7 +259,7 @@
                   <th class="pb-2 font-medium text-right">Updated</th>
                 </tr>
               </thead>
-              <tbody class="text-slate-300">
+              <tbody class="text-slate-300" id="agentsTableBody">
                 <tr class="border-b border-slate-800/40">
                   <td class="py-2.5 flex items-center gap-2"><span
                       class="w-1.5 h-1.5 rounded-full bg-neon-blue"></span>Scout-01</td>
@@ -344,7 +345,7 @@
     </div>
   </div>
 
-  <script src="./dist/index.js"></script>
+  <script type="module" src="./dist/index.js"></script>
   <script src="./app.js"></script>
 </body>
 
