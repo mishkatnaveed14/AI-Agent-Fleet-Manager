@@ -12,6 +12,9 @@ class Agentnew {
     this.name = name;
     this.status = status;
   }
+  public getid(): string {
+    return this.id;
+  }
 }
 class DeveloperAgent extends Agentnew {
   constructor(
@@ -29,5 +32,8 @@ class FleetManager {
   public addAgent(acceptagent: Agentnew): void {
     this.agents.push(acceptagent);
   }
+  // assign task
+  public assignTask(agentId: string, task: string): void {
+    let foundagent = this.agents.find((a) => a.id === agentId);
+  }
 }
-// assign task
