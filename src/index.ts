@@ -24,7 +24,6 @@ class DeveloperAgent extends Agentnew {
   ) {
     super(id, name, status);
   }
-
 }
 // fleet manager
 class FleetManager {
