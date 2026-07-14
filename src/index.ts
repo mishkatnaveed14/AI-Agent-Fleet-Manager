@@ -19,7 +19,6 @@ function closeSidebar(): void {
   }
 }
 
-/* ---------- Landing page mobile nav ---------- */
 (function initLandingNav(): void {
   const btn = document.getElementById("mobileMenuBtn");
   const menu = document.getElementById("mobileMenu");
