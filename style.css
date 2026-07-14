@@ -1,15 +1,41 @@
-* { scrollbar-width: thin; scrollbar-color: #1c2530 #05070a; }
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: #05070a; }
-::-webkit-scrollbar-thumb { background: #1c2530; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #29394a; }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1c2530 #05070a;
+}
 
-html { scroll-behavior: smooth; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-body { background-color: #05070a; }
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
 
-.bg-cyber-dark { background-color: #05070a; }
-.bg-panel-dark { background-color: #0a0e14; }
+::-webkit-scrollbar-thumb {
+  background: #1c2530;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #29394a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #05070a;
+}
+
+.bg-cyber-dark {
+  background-color: #05070a;
+}
+
+.bg-panel-dark {
+  background-color: #0a0e14;
+}
 
 .grid-bg {
   background-image:
@@ -25,14 +51,31 @@ body { background-color: #05070a; }
   -webkit-backdrop-filter: blur(14px);
 }
 
-.shadow-neon-blue { box-shadow: 0 0 24px rgba(0, 195, 253, 0.12); }
-.shadow-neon-green { box-shadow: 0 0 24px rgba(0, 255, 102, 0.12); }
+.shadow-neon-blue {
+  box-shadow: 0 0 24px rgba(0, 195, 253, 0.12);
+}
 
-.live-dot { box-shadow: 0 0 0 rgba(0, 255, 102, 0.6); animation: live-pulse 2s infinite; }
+.shadow-neon-green {
+  box-shadow: 0 0 24px rgba(0, 255, 102, 0.12);
+}
+
+.live-dot {
+  box-shadow: 0 0 0 rgba(0, 255, 102, 0.6);
+  animation: live-pulse 2s infinite;
+}
+
 @keyframes live-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(0, 255, 102, 0.6); }
-  70%  { box-shadow: 0 0 0 8px rgba(0, 255, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 255, 102, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 102, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(0, 255, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 102, 0);
+  }
 }
 
 .aurora {
@@ -44,20 +87,50 @@ body { background-color: #05070a; }
 }
 
 @keyframes drift-a {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, 30px) scale(1.08); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(40px, 30px) scale(1.08);
+  }
 }
+
 @keyframes drift-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, -20px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-30px, -20px) scale(1.05);
+  }
 }
-.drift-a { animation: drift-a 14s ease-in-out infinite; }
-.drift-b { animation: drift-b 18s ease-in-out infinite; }
+
+.drift-a {
+  animation: drift-a 14s ease-in-out infinite;
+}
+
+.drift-b {
+  animation: drift-b 18s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .drift-a, .drift-b, .live-dot, .animate-spin,
-  [class*="animate-"] { animation: none !important; }
-  html { scroll-behavior: auto; }
+
+  .drift-a,
+  .drift-b,
+  .live-dot,
+  .animate-spin,
+  [class*="animate-"] {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .orbit-ring {
@@ -68,6 +141,7 @@ body { background-color: #05070a; }
   border: 1px solid rgba(0, 195, 253, 0.25);
   border-radius: 9999px;
 }
+
 .orbit-dot {
   position: absolute;
   width: 8px;
@@ -88,26 +162,41 @@ body { background-color: #05070a; }
   color: #f1f5f9;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 .field-input:focus {
   outline: none;
   border-color: #00c3fd;
   box-shadow: 0 0 0 3px rgba(0, 195, 253, 0.12);
 }
-.field-input::placeholder { color: #475569; }
+
+.field-input::placeholder {
+  color: #475569;
+}
 
 
-.nav-link { position: relative; }
+.nav-link {
+  position: relative;
+}
+
 .nav-link::after {
   content: "";
   position: absolute;
-  left: 0; bottom: -4px;
-  width: 0; height: 1px;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
   background: linear-gradient(90deg, #00c3fd, #00ff66);
   transition: width 0.25s ease;
 }
-.nav-link:hover::after { width: 100%; }
 
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+.nav-link:hover::after {
+  width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
   outline: 2px solid #00c3fd;
   outline-offset: 2px;
 }
