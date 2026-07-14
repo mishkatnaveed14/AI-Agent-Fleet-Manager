@@ -15,7 +15,7 @@
 
 <body class="bg-gray-900">
     <!-- header -->
-        <header class="absolute inset-x-0 top-0 z-50">
+        <!-- <header class="absolute inset-x-0 top-0 z-50">
             <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
                 <div class="flex lg:flex-1">
                     <div class="flex items-center gap-3">
@@ -34,7 +34,7 @@
                             <circle cx="12" cy="12" r="2" fill="#00ff66" class="animate-pulse" />
                         </svg>
 
-                        <!-- Typography Text Logo -->
+                      
                         <div class="font-mono tracking-wider font-bold text-2xl flex flex-col leading-none">
                             <div class="flex items-center gap-1.5">
                                 <span class="text-teal-100 drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]">VORTEX</span>
@@ -122,9 +122,9 @@
                     </div>
                 </dialog>
             </el-dialog>
-        </header>
+        </header> -->
         <!-- hero section text type -->
-        <div class="relative isolate px-6 pt-14 lg:px-8 min-h-screen bg-[#0b1329]">
+        <!-- <div class="relative isolate px-6 pt-14 lg:px-8 min-h-screen bg-[#0b1329]">
             <div class="mx-auto max-w-2xl mt-12 py-12 sm:py-16 lg:py-20">
 
                 <div class="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -158,8 +158,384 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 <!-- end hero section -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex AI — Command Your AI Agent Fleet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyber-dark': '#05070a',
+            'panel-dark': '#0a0e14',
+            'neon-blue': '#00c3fd',
+            'neon-green': '#00ff66',
+          },
+          screens: { xs: '480px' },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./responsive.css">
+</head>
+
+<body class="bg-cyber-dark text-slate-100 font-sans antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-slate-800/60 bg-cyber-dark/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg class="w-7 h-7 animate-[spin_12s_linear_infinite]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="navVortex" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f0ff" />
+              <stop offset="100%" stop-color="#00ff66" />
+            </linearGradient>
+          </defs>
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 14.76 3.12 17.26 4.93 19.07" stroke="url(#navVortex)" stroke-width="2" stroke-linecap="round" />
+          <path d="M12 6C8.69 6 6 8.69 6 12C6 13.38 6.56 14.63 7.46 15.54" stroke="url(#navVortex)" stroke-width="2" stroke-linecap="round" />
+          <circle cx="12" cy="12" r="1.5" fill="#00ff66" />
+        </svg>
+        <span class="font-mono font-bold text-lg tracking-wide">VORTEX <span class="text-[10px] align-top bg-emerald-950 text-neon-green border border-neon-green/30 px-1 py-0.5 rounded font-sans">AI</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#platform" class="nav-link hover:text-white transition-colors">Platform</a>
+        <a href="#features" class="nav-link hover:text-white transition-colors">Features</a>
+        <a href="#how-it-works" class="nav-link hover:text-white transition-colors">How it works</a>
+        <a href="#pricing" class="nav-link hover:text-white transition-colors">Pricing</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="login.html" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">Log in</a>
+        <a href="signup.html" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-neon-blue/20 to-neon-green/20 border border-neon-blue/30 text-white text-sm font-semibold shadow-neon-blue hover:from-neon-blue/30 hover:to-neon-green/30 transition-all">
+          Get Started
+        </a>
+      </div>
+
+      <button id="mobileMenuBtn" class="lg:hidden p-2 bg-slate-900 border border-slate-800 rounded-lg text-slate-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800/60 bg-cyber-dark px-4 py-4 space-y-1">
+      <a href="#platform" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900/60 hover:text-white text-sm font-medium">Platform</a>
+      <a href="#features" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900/60 hover:text-white text-sm font-medium">Features</a>
+      <a href="#how-it-works" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900/60 hover:text-white text-sm font-medium">How it works</a>
+      <a href="#pricing" class="block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900/60 hover:text-white text-sm font-medium">Pricing</a>
+      <div class="pt-3 mt-2 border-t border-slate-800/60 flex flex-col gap-2">
+        <a href="login.html" class="w-full text-center px-4 py-2.5 rounded-xl border border-slate-800 text-slate-300 text-sm font-medium">Log in</a>
+        <a href="signup.html" class="w-full text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-neon-blue/20 to-neon-green/20 border border-neon-blue/30 text-white text-sm font-semibold">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden pt-36 pb-24 sm:pt-40 sm:pb-32 grid-bg">
+    <div class="aurora drift-a w-[420px] h-[420px] bg-neon-blue -top-32 -left-24"></div>
+    <div class="aurora drift-b w-[380px] h-[380px] bg-neon-green top-10 right-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-800 bg-slate-900/60 text-[11px] font-mono uppercase tracking-[0.15em] text-slate-400 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon-green live-dot"></span>
+          Autonomous Operations Platform
+        </div>
+
+        <h1 class="hero-title text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-white">
+          Command an entire
+          <span class="bg-gradient-to-r from-neon-blue to-neon-green bg-clip-text text-transparent">fleet of AI agents</span>
+          from one cockpit.
+        </h1>
+
+        <p class="mt-6 text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+          Deploy autonomous agents, assign them live workflows, and watch every task, message, and anomaly
+          the moment it happens — no war room required.
+        </p>
+
+        <div class="mt-9 flex flex-col xs:flex-row gap-3">
+          <a href="signup.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green text-cyber-dark text-sm font-bold shadow-neon-blue hover:opacity-90 transition-all">
+            Get Started
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="dashboard.html" class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-200 text-sm font-semibold hover:border-slate-700 transition-all">
+            View live demo
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-8 text-xs font-mono text-slate-500">
+          <div><span class="text-white text-lg font-bold block">42</span>agents live</div>
+          <div class="w-px h-8 bg-slate-800"></div>
+          <div><span class="text-white text-lg font-bold block">99.98%</span>uptime</div>
+          <div class="w-px h-8 bg-slate-800"></div>
+          <div><span class="text-white text-lg font-bold block">2,481</span>tasks / day</div>
+        </div>
+      </div>
+
+      <!-- Signature visual: orbiting agents around a core, with a floating live-stat glass card -->
+      <div class="relative h-[380px] sm:h-[440px] flex items-center justify-center">
+        <div class="orbit-ring w-[420px] h-[420px]"></div>
+        <div class="orbit-ring w-[320px] h-[320px]"></div>
+        <div class="orbit-ring w-[220px] h-[220px]"></div>
+
+        <div class="orbit-dot" style="top: 6%; left: 50%;"></div>
+        <div class="orbit-dot bg-neon-blue" style="box-shadow:0 0 12px 2px rgba(0,195,253,0.8); top: 50%; left: 92%;"></div>
+        <div class="orbit-dot" style="bottom: 4%; left: 30%;"></div>
+
+        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-neon-blue to-neon-green p-[2px] shadow-neon-blue">
+          <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center">
+            <svg class="w-10 h-10 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+        </div>
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-4 absolute -bottom-2 -left-2 sm:left-4 w-52 shadow-neon-blue">
+          <p class="text-[10px] font-mono uppercase tracking-wide text-slate-500">Scout-01</p>
+          <p class="text-sm font-semibold text-white mt-0.5">Lead Enrichment</p>
+          <p class="text-xs text-neon-green font-mono mt-1">● Active · 2m ago</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="relative py-20 sm:py-28 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-mono uppercase tracking-[0.2em] text-neon-blue mb-3">Platform</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Everything a fleet needs to run itself</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">Four control surfaces, one pane of glass. Built for teams who'd rather review outcomes than babysit processes.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="glass border border-slate-800/60 rounded-2xl p-5 hover:border-neon-blue/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-white mb-1.5">Fleet Agents</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Deploy, name, and retire agents in seconds. Every agent carries its own task, status, and history.</p>
+        </div>
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-5 hover:border-neon-green/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-neon-green/10 border border-neon-green/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-white mb-1.5">Real-time Analytics</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Throughput, latency, and failure trends charted live, so drift shows up before it becomes downtime.</p>
+        </div>
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-5 hover:border-amber-400/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+          </div>
+          <h3 class="font-semibold text-white mb-1.5">Task Orchestration</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Queue work, hand it to the right agent, and reassign on the fly when priorities shift.</p>
+        </div>
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-5 hover:border-rose-400/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-rose-400/10 border border-rose-400/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path></svg>
+          </div>
+          <h3 class="font-semibold text-white mb-1.5">Guardrails &amp; Alerts</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Flagged anomalies surface instantly, with a clear audit trail for every compliance scan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (real sequence, numbering earned) ============ -->
+  <section id="how-it-works" class="py-20 sm:py-28 border-t border-slate-800/60 bg-panel-dark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-14">
+        <p class="text-xs font-mono uppercase tracking-[0.2em] text-neon-green mb-3">How it works</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">From idle to deployed in three steps</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="relative pl-6 border-l border-slate-800">
+          <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neon-blue shadow-neon-blue"></span>
+          <p class="font-mono text-xs text-slate-500 mb-2">STEP 01</p>
+          <h3 class="text-lg font-semibold text-white mb-2">Deploy an agent</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Name it, pick a role, and it lands in your fleet as Idle — ready to be given work.</p>
+        </div>
+        <div class="relative pl-6 border-l border-slate-800">
+          <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neon-green shadow-neon-green"></span>
+          <p class="font-mono text-xs text-slate-500 mb-2">STEP 02</p>
+          <h3 class="text-lg font-semibold text-white mb-2">Assign a task</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Hand it a workflow and it flips to Active, working the queue on its own.</p>
+        </div>
+        <div class="relative pl-6 border-l border-slate-800">
+          <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-amber-400"></span>
+          <p class="font-mono text-xs text-slate-500 mb-2">STEP 03</p>
+          <h3 class="text-lg font-semibold text-white mb-2">Monitor &amp; adjust</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Watch throughput and alerts roll in live, and re-route work the moment something looks off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="py-20 sm:py-24 border-t border-slate-800/60">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <svg class="w-8 h-8 text-neon-blue/40 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6C4.87 8.4 3.5 11.2 3.5 14.68c0 3.24 1.87 5.32 4.47 5.32 2.2 0 3.83-1.7 3.83-3.83 0-2-1.4-3.6-3.4-3.6-.3 0-.6.03-.83.1.2-2.4 1.6-4.6 3.7-6.1L7.17 6zm10 0c-2.3 2.4-3.67 5.2-3.67 8.68 0 3.24 1.87 5.32 4.47 5.32 2.2 0 3.83-1.7 3.83-3.83 0-2-1.4-3.6-3.4-3.6-.3 0-.6.03-.83.1.2-2.4 1.6-4.6 3.7-6.1L17.17 6z"/></svg>
+      <p class="text-xl sm:text-2xl font-medium text-slate-200 leading-relaxed">
+        "We went from three people watching dashboards all night to one person glancing at Vortex once an hour. The fleet handles the rest."
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-neon-blue to-neon-green p-0.5">
+          <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-xs font-mono font-bold text-white">RS</div>
+        </div>
+        <div class="text-left">
+          <p class="text-sm font-semibold text-white">Rehan Siddiqui</p>
+          <p class="text-xs text-slate-500">Head of Platform Ops, fictional customer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="py-20 sm:py-28 border-t border-slate-800/60 bg-panel-dark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-14 mx-auto text-center">
+        <p class="text-xs font-mono uppercase tracking-[0.2em] text-neon-blue mb-3">Pricing</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Start free, scale your fleet later</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="glass border border-slate-800/60 rounded-2xl p-6">
+          <h3 class="font-semibold text-white">Starter</h3>
+          <p class="text-3xl font-bold text-white mt-3 font-mono">$0<span class="text-sm text-slate-500 font-sans">/mo</span></p>
+          <p class="text-sm text-slate-400 mt-2">For solo builders testing the waters.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Up to 3 agents</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Basic analytics</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Community support</li>
+          </ul>
+          <a href="signup.html" class="mt-6 block text-center px-4 py-2.5 rounded-xl border border-slate-800 text-slate-200 text-sm font-semibold hover:border-slate-700 transition-all">Get Started</a>
+        </div>
+
+        <div class="glass rounded-2xl p-6 border border-neon-blue/40 shadow-neon-blue relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-mono uppercase tracking-wide bg-gradient-to-r from-neon-blue to-neon-green text-cyber-dark px-3 py-1 rounded-full font-bold">Most popular</span>
+          <h3 class="font-semibold text-white">Fleet</h3>
+          <p class="text-3xl font-bold text-white mt-3 font-mono">$49<span class="text-sm text-slate-500 font-sans">/mo</span></p>
+          <p class="text-sm text-slate-400 mt-2">For teams running production workflows.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Up to 50 agents</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Full analytics suite</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Anomaly alerts</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Priority support</li>
+          </ul>
+          <a href="signup.html" class="mt-6 block text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green text-cyber-dark text-sm font-bold hover:opacity-90 transition-all">Get Started</a>
+        </div>
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-6">
+          <h3 class="font-semibold text-white">Enterprise</h3>
+          <p class="text-3xl font-bold text-white mt-3 font-mono">Custom</p>
+          <p class="text-sm text-slate-400 mt-2">For fleets that need dedicated infra.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Unlimited agents</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> SSO &amp; audit logs</li>
+            <li class="flex gap-2"><span class="text-neon-green">✓</span> Dedicated engineer</li>
+          </ul>
+          <a href="signup.html" class="mt-6 block text-center px-4 py-2.5 rounded-xl border border-slate-800 text-slate-200 text-sm font-semibold hover:border-slate-700 transition-all">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="py-20 border-t border-slate-800/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Ready to deploy your fleet?</h2>
+      <p class="mt-4 text-slate-400">No credit card needed. Your first three agents are on us.</p>
+      <a href="signup.html" class="mt-8 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green text-cyber-dark text-sm font-bold shadow-neon-blue hover:opacity-90 transition-all">
+        Get Started Free
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-800/60 bg-panel-dark/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="footer-grid grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 14.76 3.12 17.26 4.93 19.07" stroke="#00c3fd" stroke-width="2" stroke-linecap="round" />
+              <path d="M12 6C8.69 6 6 8.69 6 12C6 13.38 6.56 14.63 7.46 15.54" stroke="#00ff66" stroke-width="2" stroke-linecap="round" />
+              <circle cx="12" cy="12" r="1.5" fill="#00ff66" />
+            </svg>
+            <span class="font-mono font-bold text-white">VORTEX AI</span>
+          </a>
+          <p class="text-sm text-slate-500 max-w-xs leading-relaxed">The control tower for autonomous AI agent fleets. Deploy, monitor, and course-correct in real time.</p>
+        </div>
+
+        <div>
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-500 mb-4">Product</p>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#platform" class="hover:text-white transition-colors">Platform</a></li>
+            <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="dashboard.html" class="hover:text-white transition-colors">Live demo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-500 mb-4">Company</p>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-500 mb-4">Legal</p>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-slate-500">© 2026 Vortex AI. All rights reserved.</p>
+        <div class="flex items-center gap-4 text-slate-500">
+          <a href="#" aria-label="Twitter / X" class="hover:text-white transition-colors">
+            <svg class="w-4.5 h-4.5" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.5-6.6L4.4 22H1.3l8.1-9.3L1 2h7.2l5 6.1L18.9 2Zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20Z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="hover:text-white transition-colors">
+            <svg class="w-4.5 h-4.5" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.29 9.43 7.86 10.96.57.1.79-.25.79-.55v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.68.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-white transition-colors">
+            <svg class="w-4.5 h-4.5" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5ZM.24 8.25h4.5V23H.24V8.25Zm7.13 0h4.32v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4.5V8.25Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
+
 
 
     <script type="module" src="./dist/index.js"></script>
