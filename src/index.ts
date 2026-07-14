@@ -151,7 +151,7 @@ class FleetManager {
 
 const fleetManager = new FleetManager();
 
-/* ---------- Deploy Agent modal (dashboard.html / agents.html) ---------- */
+/* ---------- Deploy Agent modal ---------- */
 (function initDeployModal(): void {
   const deploybtn = document.getElementById("deploybtn");
   const agentModal = document.getElementById("agentModal");
@@ -181,7 +181,7 @@ const fleetManager = new FleetManager();
   });
 })();
 
-/* ---------- Agent filter buttons (agents.html) ---------- */
+/* ---------- Agent filter buttons---------- */
 (function initAgentFilters(): void {
   const buttons = document.querySelectorAll<HTMLButtonElement>(".agent-filter-btn");
   if (!buttons.length) return;
@@ -199,10 +199,9 @@ const fleetManager = new FleetManager();
   });
 })();
 
-/* Initial render for dashboard / agents pages */
 fleetManager.renderAll();
 
-/* ---------- Throughput chart (dashboard.html) ---------- */
+/* ---------- chart ---------- */
 declare const Chart: any;
 
 (function initThroughputChart(): void {
@@ -246,13 +245,11 @@ declare const Chart: any;
   const rangeSelect = document.getElementById("throughputRange");
   if (rangeSelect) {
     rangeSelect.addEventListener("change", () => {
-      // Presentation-only control in this static build; wire to a real
-      // data source when the API is available.
     });
   }
 })();
 
-/* ---------- Analytics page charts ---------- */
+
 (function initAnalyticsCharts(): void {
   const lineCtx = document.getElementById("analyticsLineChart") as HTMLCanvasElement | null;
   const doughnutCtx = document.getElementById("analyticsDoughnutChart") as HTMLCanvasElement | null;
@@ -339,7 +336,7 @@ declare const Chart: any;
   }
 })();
 
-/* ---------- Password visibility toggles (login / signup) ---------- */
+/* ---------- (login / signup) ---------- */
 function wirePasswordToggle(buttonId: string, inputId: string): void {
   const btn = document.getElementById(buttonId);
   const input = document.getElementById(inputId) as HTMLInputElement | null;
@@ -370,9 +367,6 @@ wirePasswordToggle("toggleSignupPw", "signupPassword");
       showError(errorBox, "That email address doesn't look right.");
       return;
     }
-
-    // Static demo build: no real backend, so any valid-looking
-    // credentials proceed straight to the dashboard.
     window.location.href = "dashboard.html";
   });
 })();
