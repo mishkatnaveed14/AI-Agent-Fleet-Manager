@@ -39,69 +39,44 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-800/50">
           <a href="index.html" class="flex items-center gap-2.5">
-            <svg class="w-8 h-8 animate-[spin_12s_linear_infinite]" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-8 h-8 animate-[spin_12s_linear_infinite]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="vortexGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#00f0ff" />
                   <stop offset="100%" stop-color="#00ff66" />
                 </linearGradient>
               </defs>
-              <path d="M12 2C6.48 2 2 6.48 2 12C2 14.76 3.12 17.26 4.93 19.07" stroke="url(#vortexGradient3)"
-                stroke-width="2" stroke-linecap="round" />
-              <path d="M12 6C8.69 6 6 8.69 6 12C6 13.38 6.56 14.63 7.46 15.54" stroke="url(#vortexGradient3)"
-                stroke-width="2" stroke-linecap="round" />
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 14.76 3.12 17.26 4.93 19.07" stroke="url(#vortexGradient3)" stroke-width="2" stroke-linecap="round" />
+              <path d="M12 6C8.69 6 6 8.69 6 12C6 13.38 6.56 14.63 7.46 15.54" stroke="url(#vortexGradient3)" stroke-width="2" stroke-linecap="round" />
               <circle cx="12" cy="12" r="1.5" fill="#00ff66" />
             </svg>
             <div class="font-mono font-bold flex flex-col leading-none">
               <div class="flex items-center gap-1">
                 <span class="text-neon-blue tracking-wide text-lg">VORTEX</span>
-                <span
-                  class="text-[10px] bg-emerald-950 text-neon-green border border-neon-green/30 px-1 py-0.2 rounded font-sans">AI</span>
+                <span class="text-[10px] bg-emerald-950 text-neon-green border border-neon-green/30 px-1 py-0.2 rounded font-sans">AI</span>
               </div>
             </div>
           </a>
-          <button onclick="closeSidebar()"
-            class="lg:hidden p-1.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-white rounded-lg transition-all duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
+          <button onclick="closeSidebar()" class="lg:hidden p-1.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-white rounded-lg transition-all duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
           </button>
         </div>
 
         <nav class="mt-6 space-y-1.5">
-          <span
-            class="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 block px-3 mb-2">Management</span>
+          <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 block px-3 mb-2">Management</span>
 
-          <a href="dashboard.html"
-            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-100 hover:bg-slate-900/50 rounded-xl font-medium text-sm transition-all group">
-            <svg class="w-4 h-4 text-slate-500 group-hover:text-neon-blue" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z">
-              </path>
-            </svg>
+          <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-100 hover:bg-slate-900/50 rounded-xl font-medium text-sm transition-all group">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
             Dashboard
           </a>
 
-          <a href="agents.html"
-            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-100 hover:bg-slate-900/50 rounded-xl font-medium text-sm transition-all group">
-            <svg class="w-4 h-4 text-slate-500 group-hover:text-neon-green" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
-              </path>
-            </svg>
+          <a href="agents.html" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-100 hover:bg-slate-900/50 rounded-xl font-medium text-sm transition-all group">
+            <svg class="w-4 h-4 text-slate-500 group-hover:text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
             Fleet Agents
           </a>
 
-          <a href="analytics.html"
-            class="flex items-center gap-3 px-3 py-2.5 bg-slate-800/40 text-white rounded-xl font-medium text-sm transition-all border border-slate-700/30">
-            <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-              </path>
-            </svg>
+          <a href="analytics.html" class="flex items-center gap-3 px-3 py-2.5 bg-slate-800/40 text-white rounded-xl font-medium text-sm transition-all border border-slate-700/30">
+            <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
             Analytics
           </a>
         </nav>
@@ -110,70 +85,215 @@
       <div class="border-t border-slate-800/50 pt-4">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-neon-blue to-neon-green p-0.5">
-            <div
-              class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-xs font-mono font-bold text-white">
-              MN</div>
+            <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-xs font-mono font-bold text-white">MN</div>
           </div>
           <div class="flex flex-col leading-none">
             <span class="text-sm font-semibold text-slate-200">Mishkat Naveed</span>
             <span class="text-[10px] text-slate-500 font-mono mt-0.5">Core Engineer</span>
           </div>
         </div>
-        <a href="index.html"
-          class="mt-4 flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-400 hover:text-rose-300 hover:bg-rose-500/10 text-sm font-medium transition-all">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
+        <a href="index.html" class="mt-4 flex items-center gap-2.5 px-3 py-2 rounded-xl text-slate-400 hover:text-rose-300 hover:bg-rose-500/10 text-sm font-medium transition-all">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
           Log out
         </a>
       </div>
     </aside>
 
-    <main class="flex-1 lg:ml-64 p-4 sm:p-6 lg:p-8 grid-bg min-h-screen w-full">
+    <main class="flex-1 lg:ml-64 relative p-4 sm:p-6 lg:p-8 grid-bg min-h-screen w-full overflow-hidden">
 
-      <div class="flex items-center gap-3 mb-6">
-        <button onclick="openSidebar()"
-          class="lg:hidden shrink-0 p-2 bg-slate-900 border border-slate-800 text-slate-300 rounded-lg hover:text-white hover:border-slate-700 transition-all">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-        <div>
-          <h1 class="text-xl sm:text-2xl font-bold text-white">Analytics</h1>
-          <p class="text-xs text-slate-500 mt-0.5 font-mono">Fleet-wide performance, last 7 days</p>
+      <div class="aurora drift-a w-[360px] h-[360px] bg-neon-blue -top-24 right-10"></div>
+      <div class="aurora drift-b w-[300px] h-[300px] bg-neon-green bottom-0 -left-10"></div>
+
+      <!-- Top bar -->
+      <div class="relative flex items-center justify-between mb-7 gap-3 flex-wrap">
+        <div class="flex items-center gap-3 min-w-0">
+          <button onclick="openSidebar()" class="lg:hidden shrink-0 p-2 bg-slate-900 border border-slate-800 text-slate-300 rounded-lg hover:text-white hover:border-slate-700 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 text-slate-500 text-xs font-mono mb-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-neon-green live-dot"></span>
+              LIVE · FLEET-WIDE
+            </div>
+            <h1 class="text-xl sm:text-2xl font-bold text-white truncate">Analytics<span class="text-neon-blue">.</span></h1>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <select class="bg-slate-900 border border-slate-800 text-xs text-slate-300 rounded-xl px-3 py-2.5 font-mono">
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+          </select>
+          <button class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-neon-blue/20 to-neon-green/20 border border-neon-blue/30 text-white text-sm font-semibold shadow-neon-blue hover:from-neon-blue/30 hover:to-neon-green/30 transition-all">
+            <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"></path></svg>
+            <span class="hidden xs:inline">Export report</span>
+          </button>
         </div>
       </div>
-      <div class="grid grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 mb-6">
-        <div class="glass border border-slate-800/60 rounded-2xl p-4">
+
+      <!-- Stat cards -->
+      <div class="relative grid grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 mb-6">
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-4 hover:border-neon-blue/40 hover:-translate-y-0.5 transition-all">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-9 h-9 rounded-lg bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            </div>
+            <span class="flex items-center gap-1 text-[10px] font-mono text-neon-green">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path></svg>
+              6.4%
+            </span>
+          </div>
           <p class="text-2xl font-bold text-white font-mono">2,481</p>
           <p class="text-xs text-slate-500 mt-0.5">Tasks completed</p>
+          <div class="mt-3 h-1 rounded-full bg-slate-800 overflow-hidden">
+            <div class="h-full w-[78%] bg-gradient-to-r from-neon-blue to-neon-green rounded-full"></div>
+          </div>
         </div>
-        <div class="glass border border-slate-800/60 rounded-2xl p-4">
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-4 hover:border-neon-green/40 hover:-translate-y-0.5 transition-all">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-9 h-9 rounded-lg bg-neon-green/10 border border-neon-green/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <span class="flex items-center gap-1 text-[10px] font-mono text-neon-green">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17l-5-5m0 0l5-5m-5 5h12"></path></svg>
+              0.3s faster
+            </span>
+          </div>
           <p class="text-2xl font-bold text-white font-mono">1.2s</p>
           <p class="text-xs text-slate-500 mt-0.5">Avg. response time</p>
+          <div class="mt-3 h-1 rounded-full bg-slate-800 overflow-hidden">
+            <div class="h-full w-[64%] bg-gradient-to-r from-neon-green to-neon-blue rounded-full"></div>
+          </div>
         </div>
-        <div class="glass border border-slate-800/60 rounded-2xl p-4">
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-4 hover:border-amber-400/40 hover:-translate-y-0.5 transition-all">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-9 h-9 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <span class="flex items-center gap-1 text-[10px] font-mono text-neon-green">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path></svg>
+              0.05%
+            </span>
+          </div>
           <p class="text-2xl font-bold text-white font-mono">99.98%</p>
           <p class="text-xs text-slate-500 mt-0.5">Uptime</p>
+          <div class="mt-3 h-1 rounded-full bg-slate-800 overflow-hidden">
+            <div class="h-full w-[99%] bg-amber-400 rounded-full"></div>
+          </div>
         </div>
-        <div class="glass border border-slate-800/60 rounded-2xl p-4">
+
+        <div class="glass border border-slate-800/60 rounded-2xl p-4 hover:border-rose-400/40 hover:-translate-y-0.5 transition-all">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-9 h-9 rounded-lg bg-rose-400/10 border border-rose-400/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path></svg>
+            </div>
+            <span class="flex items-center gap-1 text-[10px] font-mono text-rose-400">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"></path></svg>
+              0.2%
+            </span>
+          </div>
           <p class="text-2xl font-bold text-white font-mono">0.8%</p>
           <p class="text-xs text-slate-500 mt-0.5">Failure rate</p>
+          <div class="mt-3 h-1 rounded-full bg-slate-800 overflow-hidden">
+            <div class="h-full w-[8%] bg-rose-400 rounded-full"></div>
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+
+      <!-- Charts -->
+      <div class="relative grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4">
         <div class="glass border border-slate-800/60 rounded-2xl p-4 sm:p-5">
-          <p class="text-sm font-semibold text-slate-200 mb-3">Throughput trend</p>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-neon-green/10 border border-neon-green/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+              </div>
+              <p class="text-sm font-semibold text-slate-200">Throughput trend</p>
+            </div>
+            <span class="text-[10px] font-mono text-neon-green bg-neon-green/10 border border-neon-green/20 px-2 py-1 rounded-full">▲ 6.4%</span>
+          </div>
           <div class="h-64"><canvas id="analyticsLineChart"></canvas></div>
         </div>
+
         <div class="glass border border-slate-800/60 rounded-2xl p-4 sm:p-5">
-          <p class="text-sm font-semibold text-slate-200 mb-3">Agent status breakdown</p>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9 9 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+              </div>
+              <p class="text-sm font-semibold text-slate-200">Agent status breakdown</p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-500">42 total</span>
+          </div>
           <div class="h-64"><canvas id="analyticsDoughnutChart"></canvas></div>
         </div>
+
         <div class="glass border border-slate-800/60 rounded-2xl p-4 sm:p-5 xl:col-span-2">
-          <p class="text-sm font-semibold text-slate-200 mb-3">Tasks by workflow type</p>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4z"></path></svg>
+              </div>
+              <p class="text-sm font-semibold text-slate-200">Tasks by workflow type</p>
+            </div>
+            <span class="text-[10px] font-mono text-slate-500">2,481 tasks</span>
+          </div>
           <div class="h-64"><canvas id="analyticsBarChart"></canvas></div>
+        </div>
+      </div>
+
+      <!-- Top performing agents leaderboard -->
+      <div class="relative glass border border-slate-800/60 rounded-2xl p-4 sm:p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            </div>
+            <p class="text-sm font-semibold text-slate-200">Top performing agents</p>
+          </div>
+          <a href="agents.html" class="text-xs text-neon-blue font-mono hover:underline">View fleet →</a>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <div class="flex items-center justify-between mb-1.5 text-sm">
+              <span class="flex items-center gap-2 text-slate-200 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-neon-blue"></span>Scout-01</span>
+              <span class="font-mono text-slate-400 text-xs">820 tasks</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full w-[100%] bg-gradient-to-r from-neon-blue to-neon-green rounded-full"></div></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-1.5 text-sm">
+              <span class="flex items-center gap-2 text-slate-200 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-neon-green"></span>Synth-07</span>
+              <span class="font-mono text-slate-400 text-xs">640 tasks</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full w-[78%] bg-gradient-to-r from-neon-green to-neon-blue rounded-full"></div></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-1.5 text-sm">
+              <span class="flex items-center gap-2 text-slate-200 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Relay-12</span>
+              <span class="font-mono text-slate-400 text-xs">510 tasks</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full w-[62%] bg-amber-400 rounded-full"></div></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-1.5 text-sm">
+              <span class="flex items-center gap-2 text-slate-200 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>Vault-03</span>
+              <span class="font-mono text-slate-400 text-xs">340 tasks</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full w-[41%] bg-slate-500 rounded-full"></div></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-1.5 text-sm">
+              <span class="flex items-center gap-2 text-slate-200 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>Guard-09</span>
+              <span class="font-mono text-slate-400 text-xs">171 tasks</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full w-[21%] bg-rose-400 rounded-full"></div></div>
+          </div>
         </div>
       </div>
     </main>
@@ -181,5 +301,4 @@
 
   <script src="./app.js"></script>
 </body>
-
 </html>
